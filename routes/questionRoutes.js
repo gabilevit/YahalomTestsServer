@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controller/questions");
 const asyncHandler = require("../helpers/asyncHandler");
-const bodyParser = require("body-parser").json();
 
 // Get questions from json
 router.get(
@@ -17,7 +16,6 @@ router.get(
 // Add question to the list in json
 router.post(
   "/addQuestion",
-  bodyParser,
   asyncHandler(async (req, res) => {
     try {
       const data = await controller.addQuestion(req.body);

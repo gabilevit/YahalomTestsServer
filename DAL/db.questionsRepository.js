@@ -1,16 +1,19 @@
-const data = require("../helpers/jsonAsDb.json");
+// const data = require("../data/jsonAsDb.json");
 const fs = require("fs");
 const util = require("util");
 const writeFile = util.promisify(fs.writeFile);
-const jsonFileName = "./helpers/jsonAsDb.json";
+const readFile = util.promisify(fs.readFile);
+const jsonFileName = "./data/jsonAsDb.json";
 
 class DBQuestionsRepository {
-  getAllQuestions() {
+  async getAllQuestions() {
+    const data = JSON.parse(await readFile(jsonFileName));
     return data;
   }
 
   async addQuestion(question) {
-    data.push({ id: data.length + 1, title: question.title });
+    let data = JSON.parse(await readFile(jsonFileName));
+    data.push({ id: data.length + 1, title: question.Title });
     return await writeFile(jsonFileName, JSON.stringify(data));
   }
 }

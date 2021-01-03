@@ -8,7 +8,7 @@ class QuestionsController {
 
   // Add question to the list
   addQuestion(question) {
-    if (!question.title) throw "question has no title";
+    if (!question.Title) throw "question has no title";
     return db.addQuestion(question);
   }
 }
