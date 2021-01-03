@@ -7,11 +7,15 @@ To start the server:
 
 Make sure you have [Node.js](http://nodejs.org/) installed
 
-And then run:
+Then clone the repository:
 
 ```sh
 git clone https://github.com/sanadsa/YahalomTestsServer.git # or clone your own fork
 cd YahalomTestsServer
 ```
+
+And run:
+
 `npm install` to install the dependencies
+
 `node app.js` to start the server
