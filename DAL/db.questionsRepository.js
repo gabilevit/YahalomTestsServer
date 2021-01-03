@@ -13,7 +13,7 @@ class DBQuestionsRepository {
 
   async addQuestion(question) {
     let data = JSON.parse(await readFile(jsonFileName));
-    data.push({ id: data.length + 1, title: question.Title });
+    data.push({ Id: data.length + 1, Title: question.Title });
     return await writeFile(jsonFileName, JSON.stringify(data));
   }
 }
