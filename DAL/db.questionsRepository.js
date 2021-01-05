@@ -1,4 +1,3 @@
-// const data = require("../data/jsonAsDb.json");
 const fs = require("fs");
 const util = require("util");
 const writeFile = util.promisify(fs.writeFile);
@@ -13,8 +12,14 @@ class DBQuestionsRepository {
 
   async addQuestion(question) {
     let data = JSON.parse(await readFile(jsonFileName));
-    data.push({ Id: data.length + 1, Title: question.Title });
-    return await writeFile(jsonFileName, JSON.stringify(data));
+    const biggestId = Math.max.apply(
+      Math,
+      data.map((question) => question.Id)
+    );
+    const newQuestion = { Id: biggestId + 1, Title: question.Title };
+    data.push(newQuestion);
+    await writeFile(jsonFileName, JSON.stringify(data));
+    return newQuestion;
   }
 }
 
