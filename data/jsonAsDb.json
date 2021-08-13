@@ -1,4 +1,1 @@
-[
-  { "Id": 1, "Title": "first question" },
-  { "Id": 2, "Title": "second question" }
-]
+[{"Id":1,"Title":"How much is 2 + 2?"},{"Id":2,"Title":"Why are roses are red?"},{"Id":3,"Title":"Gabi test","CorrectAns":"red","Answer1":"idk","Answer2":"red","Answer3":"gfgh","Answer4":"111"},{"Id":4,"Title":"Is hulk gay?","CorrectAns":"no","Answer1":"Yes","Answer2":"no","Answer3":"black","Answer4":"white"},{"Id":5,"Title":"abds","CorrectAns":"white","Answer1":"Yes","Answer2":"no","Answer3":"black","Answer4":"white"},{"Id":6,"Title":"How much is 2 + 2?","CorrectAns":"","Answer1":"f","Answer2":"","Answer3":"d","Answer4":""},{"Id":7,"Title":"How much is 2 + 2?","CorrectAns":"","Answer1":"hi","Answer2":"hidfg","Answer3":"s","Answer4":"fd"},{"Id":8,"Title":"dsf","CorrectAns":"f","Answer1":"hi","Answer2":"f","Answer3":"fd","Answer4":"f"}]
