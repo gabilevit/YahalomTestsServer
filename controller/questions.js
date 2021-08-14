@@ -11,6 +11,11 @@ class QuestionsController {
     if (!question.Title) throw "question has no title";
     return db.addQuestion(question);
   }
+
+  removeQuestion(question) {
+    if (!question) throw "no question";
+    return db.removeQuestion(question);
+  }
 }
 
 module.exports = new QuestionsController();

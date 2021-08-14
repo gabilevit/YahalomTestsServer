@@ -26,4 +26,17 @@ router.post(
   })
 );
 
+// Remove question from the list in json
+router.post(
+  "/removeQuestion",
+  asyncHandler(async (req, res) => {
+    try {
+      const data = await controller.removeQuestion(req.body);
+      res.status(200).send(data);
+    } catch (err) {
+      res.status(400).send(err);
+    }
+  })
+);
+
 module.exports = router;
